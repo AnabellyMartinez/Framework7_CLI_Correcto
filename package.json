@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "My Herrramienta",
-  "repository": "",
+  "repository": "https://github.com/AnabellyMartinez/Framework7.git",
   "license": "UNLICENSED",
   "scripts": {
     "start": "npm run dev",
