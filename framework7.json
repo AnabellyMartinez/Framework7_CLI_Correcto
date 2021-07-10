@@ -1,0 +1,26 @@
+{
+  "cwd": "C:\\Users\\DELL\\Desktop\\Herramienta",
+  "type": [
+    "web"
+  ],
+  "name": "My Herrramienta",
+  "framework": "core",
+  "template": "split-view",
+  "bundler": "webpack",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": true,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false,
+  "webpack": {
+    "developmentSourceMap": true,
+    "productionSourceMap": true,
+    "hashAssets": false,
+    "preserveAssetsPaths": false,
+    "inlineAssets": true
+  }
+}

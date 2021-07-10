@@ -1,0 +1,265 @@
+/* Left Panel right border when it is visible by breakpoint */
+.panel-left.panel-in-breakpoint:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+
+/* Hide navbar link which opens left panel when it is visible by breakpoint */
+.panel-left.panel-in-breakpoint ~ .view .navbar .panel-open[data-panel="left"] {
+  display: none;
+}
+
+/*
+  Extra borders for main view and left panel for iOS theme when it behaves as panel (before breakpoint size)
+*/
+.ios .panel-left:not(.panel-in-breakpoint).panel-in ~ .view-main:before,
+.ios .panel-left:not(.panel-in-breakpoint).panel-closing ~ .view-main:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  z-index: 6000;
+}
+:root {
+  --f7-card-margin-horizontal: 16px;
+  --f7-card-margin-vertical: 16px;
+  --f7-card-content-padding-horizontal: 16px;
+  --f7-card-content-padding-vertical: 16px;
+  --f7-card-border-radius: 4px;
+  --f7-card-font-size: inherit;
+  --f7-card-header-text-color: inherit;
+  --f7-card-header-font-weight: 400;
+  --f7-card-header-padding-horizontal: 16px;
+  --f7-card-footer-font-weight: 400;
+  --f7-card-footer-font-size: inherit;
+  --f7-card-footer-padding-horizontal: 16px;
+  --f7-card-expandable-font-size: 16px;
+  --f7-card-expandable-tablet-width: 670px;
+  --f7-card-expandable-tablet-height: 670px;
+  --f7-card-bg-color: #fff;
+  --f7-card-outline-border-color: rgba(0, 0, 0, 0.12);
+  --f7-card-header-border-color: rgba(0, 0, 0, 0.1);
+  --f7-card-footer-border-color: rgba(0, 0, 0, 0.1);
+  --f7-card-expandable-bg-color: #fff;
+}
+:root .theme-dark,
+:root.theme-dark {
+  --f7-card-bg-color: #1c1c1d;
+  --f7-card-expandable-bg-color: #1c1c1d;
+  --f7-card-outline-border-color: rgba(255, 255, 255, 0.15);
+  --f7-card-header-border-color: rgba(255, 255, 255, 0.15);
+  --f7-card-footer-border-color: rgba(255, 255, 255, 0.15);
+  --f7-card-footer-text-color: rgba(255, 255, 255, 0.55);
+}
+.ios {
+  --f7-card-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  --f7-card-header-font-size: 17px;
+  --f7-card-header-padding-vertical: 10px;
+  --f7-card-header-min-height: 44px;
+  --f7-card-footer-text-color: rgba(0, 0, 0, 0.45);
+  --f7-card-footer-padding-vertical: 10px;
+  --f7-card-footer-min-height: 44px;
+  --f7-card-expandable-margin-horizontal: 20px;
+  --f7-card-expandable-margin-vertical: 30px;
+  --f7-card-expandable-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+  --f7-card-expandable-border-radius: 15px;
+  --f7-card-expandable-tablet-border-radius: 5px;
+  --f7-card-expandable-header-font-size: 27px;
+  --f7-card-expandable-header-font-weight: bold;
+}
+.md {
+  --f7-card-box-shadow: var(--f7-elevation-1);
+  --f7-card-header-font-size: 16px;
+  --f7-card-header-padding-vertical: 4px;
+  --f7-card-header-min-height: 48px;
+  --f7-card-footer-text-color: rgba(0, 0, 0, 0.54);
+  --f7-card-footer-padding-vertical: 4px;
+  --f7-card-footer-min-height: 48px;
+  --f7-card-expandable-margin-horizontal: 12px;
+  --f7-card-expandable-margin-vertical: 24px;
+  --f7-card-expandable-box-shadow: var(--f7-elevation-10);
+  --f7-card-expandable-border-radius: 8px;
+  --f7-card-expandable-tablet-border-radius: 4px;
+  --f7-card-expandable-header-font-size: 24px;
+  --f7-card-expandable-header-font-weight: 500;
+}
+.aurora {
+  --f7-card-border-radius: 8px;
+  --f7-card-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  --f7-card-header-font-size: 16px;
+  --f7-card-header-font-weight: bold;
+  --f7-card-header-padding-vertical: 8px;
+  --f7-card-header-min-height: 48px;
+  --f7-card-footer-text-color: rgba(0, 0, 0, 0.6);
+  --f7-card-footer-padding-vertical: 8px;
+  --f7-card-footer-min-height: 48px;
+  --f7-card-expandable-margin-horizontal: 10px;
+  --f7-card-expandable-margin-vertical: 20px;
+  --f7-card-expandable-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  --f7-card-expandable-border-radius: 8px;
+  --f7-card-expandable-tablet-border-radius: 4px;
+  --f7-card-expandable-header-font-size: 24px;
+  --f7-card-expandable-header-font-weight: bold;
+}
+
+
+
+main
+{
+    margin: 16px;
+}
+
+
+
+.theme-dark .navbar-large-transparent,
+.theme-dark .navbar-large.navbar-transparent {
+  --f7-navbar-large-title-text-color: #fff;
+}
+
+
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    
+
+  }
+
+  .demo-card-header-pic .card-content-padding .date {
+    color: #8e8e93;
+  }
+
+  .demo-facebook-card .card-header {
+    display: block;
+    padding: 10px;
+  }
+
+  .demo-facebook-card .demo-facebook-avatar {
+    float: left;
+  }
+
+  .demo-facebook-card .demo-facebook-name {
+    margin-left: 44px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .demo-facebook-card .demo-facebook-date {
+    margin-left: 44px;
+    font-size: 13px;
+    color: #8e8e93;
+  }
+
+  .demo-facebook-card .card-footer {
+    background: #fafafa;
+  }
+
+  .demo-facebook-card .card-footer a {
+    color: #81848b;
+    font-weight: 500;
+  }
+
+  .demo-facebook-card .card-content img {
+    display: block;
+  }
+
+  .demo-facebook-card .card-content-padding {
+    padding: 15px 10px;
+  }
+
+  .demo-facebook-card .card-content-padding .likes {
+    color: #8e8e93;
+  }
+.page
+{
+ 
+    background-color: rgb(42, 160, 72)   
+
+   
+}
+
+  .navbar-bg:after {
+    display:none;
+  }
+  
+  .toolbar:before {
+    display:none;
+  }
+
+.navbar-inner{
+    background-color: #ee8036;
+    
+    
+
+}
+
+nav a:hover /*caundo el cursor este ensima de un elemento cambia de color*/
+{
+    background-color: rgb(235, 164, 72);
+    color: #e3ece6;
+    transition: background-color 0.5s ease, color 0.5s ease-in;
+    
+   
+}
+nav
+{
+    color: #e98a65;
+   
+}
+
+nav a
+{
+    font-family: 'kalam', 'helvetica', serif;
+    display: inline-block;
+    color: #000;
+   
+    padding: 17px 60px /* trouble TRBL Top Right Bottom Left  8px de abajo hacia arriba 16 px de izquierda a derecha */;
+    text-decoration: none /* para quitarle las rayas al texto*/;
+    transition: background-color 0.5s ease, color 0.5s ease-in;
+  
+}
+
+
+nav a.current
+{
+    color: rgb(3, 3, 3);
+    background-color: white;
+}
+article header
+{
+    border-bottom: 1px solid #fff;
+}
+nav ul li
+{
+   
+    display: inline;
+}
+
+article header
+{
+    border-bottom: 1px solid #fff;
+    color: rgb(0, 0, 0);
+}
+
+
+footer
+{
+    background-color: rgb(28, 151, 54);
+    color: rgb(199, 199, 199);
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em;
+    
+}
+
