@@ -1,5 +1,5 @@
 import $ from 'dom7';
-import Framework7 from 'framework7/bundle';
+import Framework7, { Dom7 } from 'framework7/bundle';
 
 // Import F7 Styles
 import 'framework7/framework7-bundle.css';
@@ -33,3 +33,26 @@ var app = new Framework7({
     // App metedos
     metodos: metodos,
 });
+
+
+conexion();
+
+function conexion() {
+  app.request.json('http://localhost/conexion_Framewor7/conexion.php', function(data){
+    var jlh = data.length;
+    var i = "";
+    console.log(data);
+    var buatTabel="";
+    for(i= 0; i < jlh; i++){
+      buatTabel+="<tr>"+
+       "<td>"+ data[i].Id_Area+"</td>"+
+       "<td>"+ data[i].Nombre_Area+"</td>"+
+       "</tr>";
+    }
+     $$("#Area").html(buatTabel);
+
+  });
+}
+
+
+var $$ = Dom7;

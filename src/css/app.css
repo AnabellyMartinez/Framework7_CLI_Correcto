@@ -1,116 +1,75 @@
-/* Left Panel right border when it is visible by breakpoint */
-.panel-left.panel-in-breakpoint:before {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background: rgba(0,0,0,0.1);
-  content: '';
-  z-index: 6000;
+/* Your app custom styles here */
+:root,
+:root.theme-dark,
+:root .theme-dark {
+  --f7-bars-bg-color: var(--f7-theme-color);
+  --f7-bars-bg-color-rgb: var(--f7-theme-color-rgb);
+  --f7-bars-translucent-opacity: 0.9;
+  --f7-bars-text-color: rgb(255, 255, 255);
+  --f7-bars-link-color: #fff;
+  --f7-navbar-subtitle-text-color: rgba(255,255,255,0.85);
+  --f7-bars-border-color: transparent;
+  --f7-tabbar-link-active-color: #fff;
+  --f7-tabbar-link-inactive-color: rgba(255,255,255,0.54);
+  --f7-sheet-border-color: transparent;
+  --f7-tabbar-link-active-border-color: #fff;
+  --f7-color-deeporange-tint: #ff864b;
+  --f7-login-screen-blocks-max-width: 480px;
+
+  --f7-login-screen-bg-color: #121212;
+  --f7-login-screen-content-bg-color: #121212;
+  /*
+
+  
+   --f7-login-screen-list-button-text-color: var(--f7-theme-color);
+   */
+  --f7-login-screen-title-text-align: center;
+  --f7-login-screen-title-text-color: inherit;
+  --f7-login-screen-title-letter-spacing: 0;
+  --f7-login-screen-title-font-weight: 600;
+  --f7-login-screen-title-font-size: 28px;
+  --f7-login-screen-content-bg-color: rgb(214, 243, 227);
+  --f7-login-screen-bg-color: rgb(141, 214, 166);
+  
+}
+.appbar,
+.navbar,
+.toolbar,
+.subnavbar,
+.calendar-header,
+.calendar-footer {
+  --f7-touch-ripple-color: var(--f7-touch-ripple-white);
+  --f7-link-highlight-color: var(--f7-link-highlight-white);
+  --f7-link-touch-ripple-color: var(--f7-touch-ripple-white);
+  --f7-button-text-color: #fff;
+  --f7-button-pressed-bg-color: rgba(255,255,255,0.1);
+  
 }
 
-/* Hide navbar link which opens left panel when it is visible by breakpoint */
-.panel-left.panel-in-breakpoint ~ .view .navbar .panel-open[data-panel="left"] {
-  display: none;
-}
+  .ios {
+    --f7-login-screen-blocks-margin-vertical: 25px;
+     }
+     .aurora {
+        --f7-login-screen-blocks-margin-vertical: 50px;
+      }
+     
+  
+.navbar-large-transparent,
+.navbar-large.navbar-transparent {
+  --f7-navbar-large-title-text-color: #000;
 
-/*
-  Extra borders for main view and left panel for iOS theme when it behaves as panel (before breakpoint size)
-*/
-.ios .panel-left:not(.panel-in-breakpoint).panel-in ~ .view-main:before,
-.ios .panel-left:not(.panel-in-breakpoint).panel-closing ~ .view-main:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background: rgba(0,0,0,0.1);
-  content: '';
-  z-index: 6000;
-}
-:root {
-  --f7-card-margin-horizontal: 16px;
-  --f7-card-margin-vertical: 16px;
-  --f7-card-content-padding-horizontal: 16px;
-  --f7-card-content-padding-vertical: 16px;
-  --f7-card-border-radius: 4px;
-  --f7-card-font-size: inherit;
-  --f7-card-header-text-color: inherit;
-  --f7-card-header-font-weight: 400;
-  --f7-card-header-padding-horizontal: 16px;
-  --f7-card-footer-font-weight: 400;
-  --f7-card-footer-font-size: inherit;
-  --f7-card-footer-padding-horizontal: 16px;
-  --f7-card-expandable-font-size: 16px;
-  --f7-card-expandable-tablet-width: 670px;
-  --f7-card-expandable-tablet-height: 670px;
-  --f7-card-bg-color: #fff;
-  --f7-card-outline-border-color: rgba(0, 0, 0, 0.12);
-  --f7-card-header-border-color: rgba(0, 0, 0, 0.1);
-  --f7-card-footer-border-color: rgba(0, 0, 0, 0.1);
-  --f7-card-expandable-bg-color: #fff;
-}
-:root .theme-dark,
-:root.theme-dark {
-  --f7-card-bg-color: #1c1c1d;
-  --f7-card-expandable-bg-color: #1c1c1d;
-  --f7-card-outline-border-color: rgba(255, 255, 255, 0.15);
-  --f7-card-header-border-color: rgba(255, 255, 255, 0.15);
-  --f7-card-footer-border-color: rgba(255, 255, 255, 0.15);
-  --f7-card-footer-text-color: rgba(255, 255, 255, 0.55);
-}
-.ios {
-  --f7-card-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  --f7-card-header-font-size: 17px;
-  --f7-card-header-padding-vertical: 10px;
-  --f7-card-header-min-height: 44px;
-  --f7-card-footer-text-color: rgba(0, 0, 0, 0.45);
-  --f7-card-footer-padding-vertical: 10px;
-  --f7-card-footer-min-height: 44px;
-  --f7-card-expandable-margin-horizontal: 20px;
-  --f7-card-expandable-margin-vertical: 30px;
-  --f7-card-expandable-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
-  --f7-card-expandable-border-radius: 15px;
-  --f7-card-expandable-tablet-border-radius: 5px;
-  --f7-card-expandable-header-font-size: 27px;
-  --f7-card-expandable-header-font-weight: bold;
-}
-.md {
-  --f7-card-box-shadow: var(--f7-elevation-1);
-  --f7-card-header-font-size: 16px;
-  --f7-card-header-padding-vertical: 4px;
-  --f7-card-header-min-height: 48px;
-  --f7-card-footer-text-color: rgba(0, 0, 0, 0.54);
-  --f7-card-footer-padding-vertical: 4px;
-  --f7-card-footer-min-height: 48px;
-  --f7-card-expandable-margin-horizontal: 12px;
-  --f7-card-expandable-margin-vertical: 24px;
-  --f7-card-expandable-box-shadow: var(--f7-elevation-10);
-  --f7-card-expandable-border-radius: 8px;
-  --f7-card-expandable-tablet-border-radius: 4px;
-  --f7-card-expandable-header-font-size: 24px;
-  --f7-card-expandable-header-font-weight: 500;
-}
-.aurora {
-  --f7-card-border-radius: 8px;
-  --f7-card-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
-  --f7-card-header-font-size: 16px;
-  --f7-card-header-font-weight: bold;
-  --f7-card-header-padding-vertical: 8px;
-  --f7-card-header-min-height: 48px;
-  --f7-card-footer-text-color: rgba(0, 0, 0, 0.6);
-  --f7-card-footer-padding-vertical: 8px;
-  --f7-card-footer-min-height: 48px;
-  --f7-card-expandable-margin-horizontal: 10px;
-  --f7-card-expandable-margin-vertical: 20px;
-  --f7-card-expandable-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  --f7-card-expandable-border-radius: 8px;
-  --f7-card-expandable-tablet-border-radius: 4px;
-  --f7-card-expandable-header-font-size: 24px;
-  --f7-card-expandable-header-font-weight: bold;
-}
 
+
+  --r: 0;
+  --g: 122;
+  --b: 255;
+  --progress: var(--f7-navbar-large-collapse-progress);
+  --f7-bars-link-color: rgb(
+    calc(var(--r) + (255 - var(--r)) * var(--progress)),
+    calc(var(--g) + (255 - var(--g)) * var(--progress)),
+    calc(var(--b) + (255 - var(--b)) * var(--progress))
+  );
+}
 
 
 main
