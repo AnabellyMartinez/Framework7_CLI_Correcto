@@ -41,7 +41,7 @@ var app = new Framework7({
 
 
 
-var Area = Listar_Agencia();
+//var Area = Listar_Agencia();
 
 var $$ = Dom7;
 
