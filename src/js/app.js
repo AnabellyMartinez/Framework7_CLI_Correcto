@@ -15,6 +15,8 @@ import routes from './routes.js';
 import store from './store.js';
 // Import main metodos
 import metodos from './metodos.js';
+// Import main metodos
+import {Listar_Agencia} from '../Controladores/Agencia.js';
 
 // Import main app component
 import App from '../app.f7.html';
@@ -38,38 +40,8 @@ var app = new Framework7({
 });
 
 
-conexion();
 
-function conexion() {
-  app.request.json('http://localhost/conexion_Framewor7/conexion.php', function(data){
-    var jlh = data.length;
-    var i = "";
-    console.log(data);
-    var buatTabel="";
-    for(i= 0; i < jlh; i++){
-      buatTabel+="<tr>"+
-       "<td>"+ data[i].Id_Area+"</td>"+
-       "<td>"+ data[i].Nombre_Area+"</td>"+
-       "</tr>";
-    }
-     $$("#Area").html(buatTabel);
-
-  });
-}
-
-prueba3();
-function prueba3() {
-  
-  axios({
-    method: 'get',
-    url: 'http://localhost/conexion_Framewor7/conexion.php',
-  })
-    .then(response => {
-    console.log(response.data);
-  });
-
-}
-
+var Area = Listar_Agencia();
 
 var $$ = Dom7;
 
