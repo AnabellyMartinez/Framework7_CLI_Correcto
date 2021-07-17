@@ -19,6 +19,9 @@ import metodos from './metodos.js';
 // Import main app component
 import App from '../app.f7.html';
 
+// Import axios
+import axios from 'axios';
+
 
 var app = new Framework7({
   name: 'My Herrramienta', // App name
@@ -54,5 +57,20 @@ function conexion() {
   });
 }
 
+prueba3();
+function prueba3() {
+  
+  axios({
+    method: 'get',
+    url: 'http://localhost/conexion_Framewor7/conexion.php',
+  })
+    .then(response => {
+    console.log(response.data);
+  });
+
+}
+
 
 var $$ = Dom7;
+
+
