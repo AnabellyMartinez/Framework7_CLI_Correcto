@@ -5,11 +5,11 @@ import axios from 'axios';
 
 var $$ = Dom7;
 
-function Listar_Subojetivos() {
+function Listar_Subobjetivo_Area() {
   
     axios({
       method: 'get',
-      url: 'http://localhost/conexion_Framewor7/Subojetivos/Subojetivos_Select.php',
+      url: 'http://localhost/conexion_Framewor7/Subobjetivo_Area/Subobjetivo_Area_Select.php',
     })
       .then(response => {
 
@@ -23,10 +23,10 @@ function Listar_Subojetivos() {
        "</tr>";
     }
        
-      $$("Subojetivos").html(Tabla);
+      $$("Subobjetivo_Area").html(Tabla);
     });
   
   }
   
-export {Listar_Subojetivos};
+export {Listar_Subobjetivo_Area};
   
