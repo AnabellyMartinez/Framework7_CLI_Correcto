@@ -21,6 +21,12 @@ import App from '../app.f7.html';
 import metodos from './metodos.js';
 
 
+// Import main metodos
+import {Listar_Indicadores} from '../Controladores/Indicadores';
+
+var Agenca = new Listar_Indicadores();
+
+
 var app = new Framework7({
   name: 'KPIS_PROYECTO', // App name
   theme: 'auto', // Automatic theme detection

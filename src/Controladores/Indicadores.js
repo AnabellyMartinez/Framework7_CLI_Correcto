@@ -29,7 +29,8 @@ function Listar_Indicadores() {
        "<td>"+ response.data[i].Estado+"</td>"+
        "<td>"+ response.data[i].Responsables+"</td>"+
        "</tr>";
-    }
+    } 
+     
        
       $$("#Indicadores").html(Tabla);
     });
