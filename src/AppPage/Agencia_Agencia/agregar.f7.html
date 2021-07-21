@@ -1,0 +1,59 @@
+<template>
+    <div class="page" data-name="agregar">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+              <div class="left">
+                <a href="#" class="link back">
+                  <i class="icon icon-back"></i>
+                  <span class="if-not-md">Back</span>
+                </a>
+              </div>
+              <div class="title">Regresar</div>
+            </div>
+          </div>
+      <div class="page-content">
+        <form class="list" id="my-form">
+          <ul>
+            <li>
+              
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <p><div class="item-title item-label">Id_Agencia</div></p>
+                  <div class="item-input-wrap">
+                    <select name="select">
+                      <option value="value1"selected>1</option>
+                      <option value="value2">2</option>
+                      <option value="value3">3</option>
+                    </select>   
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <p><div class="item-title item-label">Nombre_agencia</div></p>
+                  <div class="item-input-wrap">
+                    <input type="text" name="nombre_agencia" placeholder="Nombre_agencia" />
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+        <div class="block block-strong row">
+          <div class="col"><a class="button button-fill fill-form-from-data" href="#">AGREGAR</a></div>
+        </div>
+  </div> 
+  </div>
+    </div>
+    </template>
+    <script>
+       
+    export default () => {
+      return $render;
+     
+    };
+    </script>
+    
