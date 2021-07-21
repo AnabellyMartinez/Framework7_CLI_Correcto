@@ -1,0 +1,166 @@
+<template>
+    <div class="page" data-name="init">
+      <div class="navbar navbar-large ">
+        <div  class="navbar-inner">
+          <nav>
+            <ul>
+                <li><a href>OBJETIVOS</a></li>
+                <li><a href>META</a></li>
+                 <li><a href="/Agencia/" >Agencia</a></li>
+                <li><a href="/loginnuevo/" class=" login-screen-open"  data-login-screen="#my-login-screen" >LOGIN</a></li>
+            </ul> 
+        </nav>
+    
+          <div class="right">
+            <a href="search" class="link icon-only">
+               <i class="f7-icons">search_circle </i>
+            </a> 
+          <a href="#" class="link icon-only">
+              <i class="f7-icons">person_alt_circle </i>
+          </a> 
+          <a href="#" @click="AccessPront" class="link icon-only">
+            <i class="f7-icons">person </i>
+        </a> 
+          </div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="data-table">
+          <table>
+            <thead>
+              <tr>
+      
+                <th style="font-weight: bold">Id_CodigoIndiador</th>
+                <th >Id_subobjetivos</th>
+                <th>Id_Tiempo</th>
+                <th>Nombre_Indicador</th>
+                <th >Proceso</th>
+                <th>Formula </th>
+                <th >Detalle</th>
+                <th >Estado</th>
+                <th>Responsables</th>
+                <th><a href="search" class="link icon-only"><i class="f7-icons"> folder_fill_badge_plus </i></a></th>
+                <th><a href="search" class="link icon-only"><i class="f7-icons"> arrow_2_circlepath_circle_fill </i></a></th>
+              </tr>
+            </thead>
+            <tbody id="Indicadores">
+            </tbody>
+          </table>
+          
+        </div>
+  
+        <!-- <div class="card demo-card-header-pic">
+           <div style="background-image:url(https://cdn.framework7.io/placeholder/people-1000x600-6.jpg)"
+            class="card-header align-items-flex-end">Lorem Ipsum</div>
+            <div class="card-content card-content-padding">
+            <p class="date">Posted on January 21, 2015</p>
+            <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus
+              quis nibh hendrerit...</p>
+           </div>
+            <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Read more</a></div>
+        </div>
+        <div class="block-title">Styled Cards</div>
+           <div class="card demo-card-header-pic">
+            <div style="background-image:url(https://cdn.framework7.io/placeholder/nature-1000x600-3.jpg)"
+             class="card-header align-items-flex-end">Journey To Mountains</div>
+            <div class="card-content card-content-padding">
+             <p class="date">Posted on January 21, 2015</p>
+             <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus
+              quis nibh hendrerit...</p>
+        </div>
+          <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Read more</a></div>
+        </div> -->
+      </div>
+    </div>
+  </template>
+  <style>
+  
+    
+  table {
+      background-color: #96e0af;
+    --f7-table-input-height: bo;
+    --f7-table-head-cell-height: 56px;
+    --f7-table-head-icon-size: 18px;
+    --f7-table-body-cell-height: 48px;
+    --f7-table-cell-padding-horizontal: 16px;
+    --f7-table-edge-cell-padding-horizontal: 16px;
+    --f7-table-label-cell-padding-horizontal: 16px;
+    --f7-table-checkbox-cell-width: 22px;
+    /* --f7-table-actions-cell-link-color: var(--f7-theme-color); */
+    /* --f7-table-actions-link-color: var(--f7-theme-color); */
+    --f7-table-title-font-size: 20px;
+    --f7-table-footer-height: 56px;
+    --f7-table-head-text-color: rgba(0, 0, 0, 0.6);
+    --f7-table-cell-border-color: rgba(0, 0, 0, 0.12);
+    --f7-table-selected-row-bg-color: rgba(0, 0, 0, 0.03);
+  
+    --f7-table-head-bg-color: #f6f6f7;
+    --f7-table-card-header-bg-color: #2ec773;
+  }
+  
+  
+  p {
+      margin: 10px 0;
+      font: oblique bold 120%
+    }
+  </style>
+  <script>
+    export default function (props, {$f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) {
+      // Component Data
+      let name = 'Jimmy';
+      let age = 25;
+      let likes = ['Tennis', 'Chess', 'Football'];
+     
+  
+      // Component Methods
+      const openAlert = () => {
+        $f7.dialog.alert('Hello World');
+      }
+  
+      function AccessPront ()
+        {
+          
+        }
+  
+      // Lifecycle
+      $onBeforeMount(() => {
+        console.log('onBeforeMount');
+      });
+      $onMounted(() => {
+        console.log('onMounted');
+      });
+      $onBeforeUnmount(() => {
+        console.log('onBeforeUnmount');
+      });
+      $onUnmounted(() => {
+        console.log('onUnmounted');
+      });
+  
+      // Page Events
+      $on('pageMounted', (e, page) => {
+        console.log('pageMounted', page);
+      });
+      $on('pageInit', (e, page) => {
+        console.log('pageInit', page);
+      });
+      $on('pageBeforeIn', (e, page) => {
+        console.log('pageBeforeIn', page);
+      });
+      $on('pageAfterIn', (e, page) => {
+        console.log('pageAfterIn', page);
+      });
+      $on('pageBeforeOut', (e, page) => {
+        console.log('pageBeforeOut', page);
+      });
+      $on('pageAfterOut', (e, page) => {
+        console.log('pageAfterOut', page);
+      });
+      $on('pageBeforeRemove', (e, page) => {
+        console.log('pageBeforeRemove', page);
+      });
+  
+      // Return render function
+      return $render;
+    }
+  </script>
+  

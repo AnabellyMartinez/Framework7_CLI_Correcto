@@ -5,7 +5,10 @@ import axios from 'axios';
 
 var $$ = Dom7;
 
+
+
 function Listar_Indicadores() {
+  alert('Entro a la pagina');
   
     axios({
       method: 'get',
@@ -20,18 +23,19 @@ function Listar_Indicadores() {
         Tabla+="<tr>"+
        "<td>"+ response.data[i].Id_CodigoIndiador+"</td>"+
        "<td>"+ response.data[i].Id_subobjetivos+"</td>"+
+       "<td>"+ response.data[i].Id_Tiempo+"</td>"+
        "<td>"+ response.data[i].Nombre_Indicador+"</td>"+
        "<td>"+ response.data[i].Proceso+"</td>"+
-       "<td>"+ response.data[i].Nombre_Indicador+"</td>"+
        "<td>"+ response.data[i].Formula+"</td>"+
        "<td>"+ response.data[i].Detalle+"</td>"+
-       "<td>"+ response.data[i].Id_Tiempo+"</td>"+
        "<td>"+ response.data[i].Estado+"</td>"+
        "<td>"+ response.data[i].Responsables+"</td>"+
+       "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons">trash_fill</i></a>' +"</td>"+
+     
+       "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons"> pencil_circle_fill</i></a>' +"</td>"+
        "</tr>";
     } 
      
-       
       $$("#Indicadores").html(Tabla);
     });
   

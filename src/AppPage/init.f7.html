@@ -5,12 +5,11 @@
         <nav>
           <ul>
               <li><a href>OBJETIVOS</a></li>
-              <li><a href>META</a></li>
+              <li><a href>OBJETIVOS</a></li>
                <li><a href="/about/" >Agencia</a></li>
               <li><a href="/loginnuevo/" class=" login-screen-open"  data-login-screen="#my-login-screen" >LOGIN</a></li>
           </ul> 
       </nav>
-  
         <div class="right">
           <a href="search" class="link icon-only">
              <i class="f7-icons">search_circle </i>
@@ -29,13 +28,139 @@
         <table>
           <thead>
             <tr>
-              <th>Id_Area </th>
-              <th >Nombre_Area</th>
+              <th style="font-weight: bold">Id_CodigoIndiador</th>
+              <th >Id_subobjetivos</th>
+              <th>Id_Tiempo</th>
+              <th>Nombre_Indicador</th>
+              <th >Proceso</th>
+              <th>Formula </th>
+              <th >Detalle</th>
+              <th >Estado</th>
+              <th>Responsables</th>
+              <th><a href="search" class="link icon-only"><i class="f7-icons"> folder_fill_badge_plus </i></a></th>
+              <th><a href="search" class="link icon-only"><i class="f7-icons"> arrow_2_circlepath_circle_fill </i></a></th>
             </tr>
           </thead>
           <tbody id="Indicadores">
           </tbody>
         </table>
+        
+      </div>
+      <div class="block block-strong row">
+        <div class="title">AGREGAR INDICADORES</div>
+      </div>
+      <form class="list" id="my-form">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Id_CodigoIndiador</div></p>
+                <div class="item-input-wrap">
+                  <select name="select">
+                    <option value="value1"selected>1</option>
+                    <option value="value2">2</option>
+                    <option value="value3">3</option>
+                  </select>   
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Id_subobjetivos</div></p>
+                <div class="item-input-wrap">
+                  <select name="select">
+                    <option value="value1">1</option>
+                    <option value="value2" selected>2</option>
+                    <option value="value3">3</option>
+                  </select>   
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Nombre_Indicador</div></p>
+                <div class="item-input-wrap">
+                  <select name="select">
+                    <option value="value1">1</option>
+                    <option value="value2" selected>2</option>
+                    <option value="value3">3</option>
+                  </select>   
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Id_Tiempo</div></p>
+                <div class="item-input-wrap">
+                  <select name="select">
+                    <option value="value1">1</option>
+                    <option value="value2" selected>2</option>
+                    <option value="value3">3</option>
+                  </select>   
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Proceso</div></p>
+                <div class="item-input-wrap">
+                  <input type="text" name="proceso" placeholder="Proceso" />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Formula</div></p>
+                <div class="item-input-wrap">
+                  <input type="text" name="formula" placeholder="Formula" />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Detalle</div></p>
+                <div class="item-input-wrap">
+                  <input type="text" name="detalle" placeholder="Detalle" />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Estado</div></p>
+                <div class="item-input-wrap">
+                  <input type="text" name="estado" placeholder="Estado" />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Responsables</div></p>
+                <div class="item-input-wrap">
+                  <input type="text" name="responsables" placeholder="Responsables" />
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </form>
+      <div class="block block-strong row">
+        <div class="col"><a class="button button-fill fill-form-from-data" href="#">AGREGAR</a></div>
       </div>
 
       <!-- <div class="card demo-card-header-pic">
@@ -64,10 +189,40 @@
 </template>
 <style>
 
+  
+table {
+    background-color: #96e0af;
+  --f7-table-input-height: bo;
+  --f7-table-head-cell-height: 56px;
+  --f7-table-head-icon-size: 18px;
+  --f7-table-body-cell-height: 48px;
+  --f7-table-cell-padding-horizontal: 16px;
+  --f7-table-edge-cell-padding-horizontal: 16px;
+  --f7-table-label-cell-padding-horizontal: 16px;
+  --f7-table-checkbox-cell-width: 22px;
+  /* --f7-table-actions-cell-link-color: var(--f7-theme-color); */
+  /* --f7-table-actions-link-color: var(--f7-theme-color); */
+  --f7-table-title-font-size: 20px;
+  --f7-table-footer-height: 56px;
+  --f7-table-head-text-color: rgba(0, 0, 0, 0.6);
+  --f7-table-cell-border-color: rgba(0, 0, 0, 0.12);
+  --f7-table-selected-row-bg-color: rgba(0, 0, 0, 0.03);
+
+  --f7-table-head-bg-color: #f6f6f7;
+  --f7-table-card-header-bg-color: #2ec773;
+}
+
 
 p {
     margin: 10px 0;
+    font-family: fantasy;
+     font-size: 280pt;
+     text-align: center;
   }
+
+  .center {
+text-align: center
+}
 </style>
 <script>
   export default function (props, {$f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) {
