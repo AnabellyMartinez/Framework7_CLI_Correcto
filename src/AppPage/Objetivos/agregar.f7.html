@@ -1,141 +1,72 @@
 <template>
-    <div class="page" data-name="agregar">
-        <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner sliding">
-              <div class="left">
-                <a href="#" class="link back">
-                  <i class="icon icon-back"></i>
-                  <span class="if-not-md">Back</span>
-                </a>
-              </div>
-              <div class="title">Regresar</div>
+  <div class="page" data-name="agregar">
+      <div class="navbar">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner sliding">
+            <div class="left">
+              <a href="#" class="link back">
+                <i class="icon icon-back"></i>
+                <span class="if-not-md">Back</span>
+              </a>
             </div>
+            <div class="title">Regresar</div>
           </div>
-      <div class="page-content">
-        <form class="list" id="my-form">
-          <ul>
-            <li>
-              
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Id_CodigoIndiador</div></p>
-                  <div class="item-input-wrap">
-                    <select name="select">
-                      <option value="value1"selected>1</option>
-                      <option value="value2">2</option>
-                      <option value="value3">3</option>
-                    </select>   
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Id_subobjetivos</div></p>
-                  <div class="item-input-wrap">
-                    <select name="select">
-                      <option value="value1">1</option>
-                      <option value="value2" selected>2</option>
-                      <option value="value3">3</option>
-                    </select>   
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Nombre_Indicador</div></p>
-                  <div class="item-input-wrap">
-                    <select name="select">
-                      <option value="value1">1</option>
-                      <option value="value2" selected>2</option>
-                      <option value="value3">3</option>
-                    </select>   
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Id_Tiempo</div></p>
-                  <div class="item-input-wrap">
-                    <select name="select">
-                      <option value="value1">1</option>
-                      <option value="value2" selected>2</option>
-                      <option value="value3">3</option>
-                    </select>   
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Proceso</div></p>
-                  <div class="item-input-wrap">
-                    <input type="text" name="proceso" placeholder="Proceso" />
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Formula</div></p>
-                  <div class="item-input-wrap">
-                    <input type="text" name="formula" placeholder="Formula" />
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Detalle</div></p>
-                  <div class="item-input-wrap">
-                    <input type="text" name="detalle" placeholder="Detalle" />
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Estado</div></p>
-                  <div class="item-input-wrap">
-                    <input type="text" name="estado" placeholder="Estado" />
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <p><div class="item-title item-label">Responsables</div></p>
-                  <div class="item-input-wrap">
-                    <input type="text" name="responsables" placeholder="Responsables" />
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </form>
-        <div class="block block-strong row">
-          <div class="col"><a class="button button-fill fill-form-from-data" href="#">AGREGAR</a></div>
         </div>
-  </div> 
+    <div class="page-content">
+      <form class="list" id="my-form">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">id_Objetivo</div></p>
+                <div class="item-input-wrap">
+                  <select name="select">
+                    <option value="value1"selected>1</option>
+                    <option value="value2">2</option>
+                    <option value="value3">3</option>
+                  </select>   
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Id_Area_Agencia</div></p>
+                <div class="item-input-wrap">
+                  <select name="select">
+                    <option value="value1"selected>1</option>
+                    <option value="value2">2</option>
+                    <option value="value3">3</option>
+                  </select>   
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <p><div class="item-title item-label">Nombre_objetivo</div></p>
+                <div class="item-input-wrap">
+                  <input type="text" name="nombre_objetivo" placeholder="Nombre_objetivo" />
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </form>
+      <div class="block block-strong row">
+        <div class="col"><a class="button button-fill fill-form-from-data" href="#">AGREGAR</a></div>
+      </div>
+</div> 
+</div>
   </div>
-    </div>
-    </template>
-    <script>
-       
-    export default () => {
-      return $render;
+  </template>
+  <script>
      
-    };
-    </script>
-    
+  export default () => {
+    return $render;
+   
+  };
+  </script>
+  
