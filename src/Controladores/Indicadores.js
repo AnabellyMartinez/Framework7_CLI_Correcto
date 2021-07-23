@@ -8,7 +8,7 @@ var $$ = Dom7;
 
 
 function Listar_Indicadores() {
-  alert('Entro a la pagina');
+
   
     axios({
       method: 'get',

@@ -5,7 +5,7 @@ import axios from 'axios';
 
 var $$ = Dom7;
 
-function Listar_Objetvo() {
+function Listar_Objetivo() {
   
     axios({
       method: 'get',
@@ -21,10 +21,12 @@ function Listar_Objetvo() {
        "<td>"+ response.data[i].id_Objetivo+"</td>"+
        "<td>"+ response.data[i].Nombre_objetivo+"</td>"+
        "<td>"+ response.data[i].Porcentaje_Objetivo+"</td>"+
+        "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons">trash_fill</i></a>' +"</td>"+
+       "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons"> pencil_circle_fill</i></a>' +"</td>"+
        "</tr>";
     }
-       
-      $$("Objetivo").html(Tabla);
+      
+      $$("#Objetivo").html(Tabla);
     });
   
   }

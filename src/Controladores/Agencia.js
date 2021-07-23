@@ -22,8 +22,7 @@ function Listar_Agencia() {
        "<td>"+ response.data[i].Nombre_agencia+"</td>"+
        "</tr>";
     }
-    
-       
+     
       $$("#Agencia").html(Tabla);
     });
   

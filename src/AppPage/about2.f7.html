@@ -1,5 +1,5 @@
 <template>
-<div class="page" data-name="about">
+<div class="page" data-name="about2">
   <div class="navbar">
     <div class="navbar-bg"></div>
     <div class="navbar-inner sliding">
@@ -31,9 +31,12 @@
 </div>
 </template>
 <script>
-
-
-export default () => {
+  import {Listar_Agencia} from '../Controladores/Agencia';
+  export default function (props, {$f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) {
+ $on('pageMounted', (e, page) => {
+       var ana = new Listar_Agencia ();
+        console.log('pageMounted', page);
+      });
   return $render;
  
 };
