@@ -20,10 +20,12 @@ function Listar_Meta() {
         Tabla+="<tr>"+
        "<td>"+ response.data[i].Id_CodigoIndiador+"</td>"+
        "<td>"+ response.data[i].Id_Area_Agencia+"</td>"+
+       "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons">trash_fill</i></a>' +"</td>"+
+       "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons"> pencil_circle_fill</i></a>' +"</td>"+
        "</tr>";
     }
        
-      $$("Meta").html(Tabla);
+      $$("#Meta").html(Tabla);
     });
   
   }

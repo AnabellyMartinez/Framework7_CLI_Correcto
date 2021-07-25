@@ -23,7 +23,7 @@ function Listar_Tiempo() {
        "</tr>";
     }
        
-      $$("Tiempo").html(Tabla);
+      $$("#Tiempo").html(Tabla);
     });
   
   }

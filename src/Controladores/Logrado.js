@@ -24,10 +24,13 @@ function Listar_Logrado() {
        "<td>"+ response.data[i].Logrado+"</td>"+
        "<td>"+ response.data[i].Porcentaje_Cumplimiento+"</td>"+
        "<td>"+ response.data[i].Observacion+"</td>"+
+       "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons">trash_fill</i></a>' +"</td>"+
+       "<td>"+ '<a href="search" class="link icon-only"><i class="f7-icons"> pencil_circle_fill</i></a>' +"</td>"+
+       "</tr>";
        "</tr>";
     }
        
-      $$("Logrado").html(Tabla);
+      $$("#Logrado").html(Tabla);
     });
   
   }
