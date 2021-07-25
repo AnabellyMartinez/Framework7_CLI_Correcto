@@ -8,8 +8,7 @@ import ObjetivosPage from '../AppPage/Objetivos/Objetivos.f7.html';
 import LogradoPage from '../AppPage/Logrado/Logrado.f7.html';
 import MetaPage from '../AppPage/Meta/Meta.f7.html';
 import TiempoPage from '../AppPage/Tiempo/Tiempo.f7.html';
-import TiempoPage from '../AppPage/Tiempo/Tiempo.f7.html';
-import SubobjetivoAreaPage from '../AppPage/Subobjetivo_Area/Subobjetivo_Area.f7.html';
+import SubobjetivoAreaPage from '../AppPage/Subobjetivos_Area/Subobjetivo_Area.f7.html';
 
 
 
