@@ -23,7 +23,7 @@ function Listar_Subobjetivo_Area() {
        "</tr>";
     }
        
-      $$("Subobjetivo_Area").html(Tabla);
+      $$("#Subobjetivo_Area").html(Tabla);
     });
   
   }

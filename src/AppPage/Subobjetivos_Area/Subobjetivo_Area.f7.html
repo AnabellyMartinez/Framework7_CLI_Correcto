@@ -1,0 +1,51 @@
+<template>
+  <div class="page" data-name="Subobjetivo_Area">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Regresar</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr>
+              <th style="font-weight: bold">Id_subobjetivos</th>
+              <th style="font-weight: bold">Id_Area</th>
+              <th><a href="search" class="link icon-only"><i class="f7-icons"> folder_fill_badge_plus </i></a></th>
+              <th><a href="search" class="link icon-only"><i class="f7-icons"> arrow_2_circlepath_circle_fill </i></a></th>
+            </tr>
+          </thead>
+          <tbody id="Subobjetivo_Area">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </template>
+  <script>
+   import {Listar_Subobjetivo_Area} from '../../Controladores/Subobjetivo_Area';
+    export default function (props, {$f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) {
+   $on('pageMounted', (e, page) => {
+    var ana = new Listar_Subobjetivo_Area();
+          console.log('pageMounted', page);
+        });
+    return $render;
+  
+  };
+  </script>
+
+   <style>
+
+     p{
+      text-align: center;
+
+     }
+   </style>
