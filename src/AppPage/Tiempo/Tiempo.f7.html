@@ -13,38 +13,33 @@
       </div>
     </div>
     <div class="page-content">
-      <table>
-        <thead>
-          <tr>
-            <th style="font-weight: bold">Id_Tiempo</th>
-            <th style="font-weight: bold">Nombre_Periodo</th>
-            <th><a href="search" class="link icon-only"><i class="f7-icons"> folder_fill_badge_plus </i></a></th>
-            <th><a href="search" class="link icon-only"><i class="f7-icons"> arrow_2_circlepath_circle_fill </i></a></th>
-          </tr>
-        </thead>
-        <tbody id="Tiempo">
-        </tbody>
-      </table>
+      <div class="data-table">
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Id_Tiempo</th>
+              <th>Nombre_Periodo</th>
+              <th><a href="search" class="link icon-only"><i class="f7-icons"> folder_fill_badge_plus </i></a></th>
+              <th><a href="search" class="link icon-only"><i class="f7-icons"> arrow_2_circlepath_circle_fill </i></a></th>
+            </tr>
+          </thead>
+          <tbody id="Tiempo">
+          </tbody>
+        </table>
+  
       </div>
     </div>
   </div>
   </template>
   <script>
-   import {Listar_Tiempo} from '../../Controladores/Tiempo';
+    import {Listar_Tiempo} from '../../Controladores/Tiempo';
     export default function (props, {$f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) {
    $on('pageMounted', (e, page) => {
-    var ana = new Listar_Tiempo();
+         var ana = new Listar_Tiempo();
           console.log('pageMounted', page);
         });
     return $render;
-  
+   
   };
   </script>
-
-   <style>
-
-     p{
-      text-align: center;
-
-     }
-   </style>

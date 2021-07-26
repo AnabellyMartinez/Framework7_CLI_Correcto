@@ -19,7 +19,7 @@ function Listar_Logrado() {
        for(i= 0; i < jlh; i++){
         Tabla+="<tr>"+
        "<td>"+ response.data[i].Id_CodigoIndiador+"</td>"+
-       "<td>"+ response.data[i].Id_Area_Agencias+"</td>"+
+       "<td>"+ response.data[i].Id_Area_Agencia+"</td>"+
        "<td>"+ response.data[i].Meta+"</td>"+
        "<td>"+ response.data[i].Logrado+"</td>"+
        "<td>"+ response.data[i].Porcentaje_Cumplimiento+"</td>"+
